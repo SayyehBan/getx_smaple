@@ -1,20 +1,17 @@
+// ignore_for_file: file_names, must_be_immutable
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_smaple/controller/product_controller.dart';
-import 'package:getx_smaple/view/main/productScreen.dart';
 
-// ignore: must_be_immutable
-class MainScreen extends StatelessWidget {
-  MainScreen({super.key});
-  var counter = 0.obs;
-  // RxInt counter = 0.obs;
-  // var counter = RxInt(0);
-  // var counter = Rx<int>(0);
+class ProductScreen extends StatelessWidget {
+  ProductScreen({super.key});
   ProductController productController = Get.put(ProductController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +40,7 @@ class MainScreen extends StatelessWidget {
                 ElevatedButton(
                     onPressed: () {
                       productController.productModel.update((val) {
-                        val!.name = "چیپس نمیخوری";
+                        val!.name = "نوشابه نمیخوری";
                         val.price = 85000;
                         val.off = "10%";
                       });
@@ -54,9 +51,9 @@ class MainScreen extends StatelessWidget {
                 ),
                 ElevatedButton(
                     onPressed: () {
-                      Get.to(ProductScreen());
+                      Get.back();
                     },
-                    child: const Icon(CupertinoIcons.arrow_2_circlepath))
+                    child: const Icon(CupertinoIcons.back))
               ],
             )
           ],

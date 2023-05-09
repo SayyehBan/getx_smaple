@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_smaple/view/main/main_screen.dart';
+import 'package:getx_smaple/view/main/productScreen_getx_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: Directionality(
-            textDirection: TextDirection.rtl, child: MainScreen()));
+        home: const Directionality(
+            textDirection: TextDirection.rtl,
+            child: ProductScreenGetxWidget()));
   }
 }
