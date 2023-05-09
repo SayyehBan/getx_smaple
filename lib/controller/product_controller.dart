@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:getx_smaple/model/productModel.dart';
+import '../model/produt_model.dart';
 
 class ProductController extends GetxController {
   Rx<ProductModel> productModel =
-      ProductModel(name: "نوشابه", off: "50", price: 500).obs;
+      ProductModel(name: "نوشابه", off: "50", price: "500").obs;
 }
